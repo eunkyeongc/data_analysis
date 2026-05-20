@@ -1,0 +1,1 @@
+def enter_gym(name)
