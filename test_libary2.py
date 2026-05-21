@@ -27,9 +27,7 @@ def check_seat(seat_number):
 
 if __name__ == '__main__':
     grade = input('회원 등급을 입력하세요(준회원/정회원/우수회원) : ')
-    check_membership(grade)
     if check_membership(grade):  
         seat_number = int(input('좌석 번호를 입력하세요 : '))
-        check_seat(seat_number) 
         if check_seat(seat_number):
                 print(f'{seat_number}번 좌석 예약 완료!')
