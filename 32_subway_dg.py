@@ -201,6 +201,7 @@ def save_csv(data, filename):
         writer.writerows(data)  # 데이터 전체 쓰기
     print(f'저장 완료: {filename} ({len(data)}행)')
 
+
 result_data =[
     {'월':month, '역명':TARGET, '승차인원': count }
     for month, count in sorted(station_trend.items())
