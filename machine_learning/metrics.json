@@ -1,0 +1,16 @@
+﻿{
+  "test_rows": 105,
+  "roc_auc": 0.6347,
+  "recall_churn": 0.4857,
+  "precision_churn": 0.4595,
+  "confusion_matrix": [
+    [
+      50,
+      20
+    ],
+    [
+      18,
+      17
+    ]
+  ]
+}
