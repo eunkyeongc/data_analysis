@@ -14,7 +14,7 @@ import os
 import streamlit as st
 
 # pages_src폴더를 파이썬의 import 경로(sys.path)에 직접 추가한다.--> streamlit에서 지원이 안되어서 직접 경로 설정.
-sys.path.append(os.path.join(os.paht.dirname(__file__), 'pages_src'))
+sys.path.append(os.path.join(os.path.dirname(__file__), 'pages_src'))
 
 st.set_page_config(
     page_title =  '대구 지하철 승하차 통합 대시보드',
@@ -26,17 +26,17 @@ st.set_page_config(
 # st.page(파일경로, title=사이드바 표시 이름, icon = 아이콘, default = True)
 #   - 파일 경로는 상대 경로. main.py 기준
 #   - defalut = True인 페이지가 앱을 처음 열었을 때 보이는 화면이 된다.
-home_page = st.Page('day62_streamlit_subway/pages_src/home.py', title='홈', icon='🏡', default=True)
-explore_page = st.Page('day62_streamlit_subway/pages_src/explore.py', title='역별 탐색', icon='🚏')
-search_page = st.Page('day62_streamlit_subwaypages_src/search.py', title='검색', icon='🔍')
-trend_page = st.Page('day62_streamlit_subway/pages_src/trend.py', title='기간, 시간대 추이', icon='📈')
-about_page = st.Page('day62_streamlit_subway/pages_src/about.py', title='소개', icon='🎤')
+home_page = st.Page('pages_src/home.py', title='홈', icon='🏡', default=True)
+explore_page = st.Page('pages_src/explore.py', title='역별 탐색', icon='🚏')
+search_page = st.Page('pages_src/search.py', title='검색', icon='🔍')
+trend_page = st.Page('pages_src/trend.py', title='기간, 시간대 추이', icon='📈')
+about_page = st.Page('pages_src/about.py', title='소개', icon='🎤')
 
 # ---  사이드바에 페이지 연결 : 각 섹션 제목이 함게 표시된다. 딕셔너리 형태로...
 pg = st.navigation({
     '메인' : [home_page],
-    '데이터 탐색': [explore_page, search_page, trend_page]
-    '기타': [about_page]
+    '데이터 탐색': [explore_page, search_page, trend_page],
+    '기타': [about_page],
 })
 
 # pg.run() : 사용자가 사이드바에서 클리한 페이지의 코드를 실제로 실행한다.

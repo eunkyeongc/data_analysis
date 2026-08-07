@@ -20,7 +20,7 @@ def load_subway(path: str='./day62_streamlit_subway/input/subway_long.csv') -> p
         '역명': 'category',
         '승하차': 'category',
         '시간대컬럼': 'category',
-        '요일코드': 'category',
+        '요일코드': 'category'
     }
     df = pd.read_csv(path, dtype=dtype_map)
 
@@ -29,7 +29,7 @@ def load_subway(path: str='./day62_streamlit_subway/input/subway_long.csv') -> p
 
     # 요일코드 컬럼을 '정렬 가능한' 순서형(categorical)으로 바꾼다.
     # 그룹이나 그래프 등 작업시 항상 월~일 순서로 나오게 하기 위한 작업(안하면 데이터 등장 순서대로 정렬된다.)
-    df['요일코드'] = pd.Categorical(df['요일코드'], categories=WEEKDAY_ORDER, order=True)
+    df['요일코드'] = pd.Categorical(df['요일코드'], categories=WEEKDAY_ORDER, ordered=True)
 
     return df
 
