@@ -12,7 +12,7 @@ import pandas as pd
 WEEKDAY_ORDER = ['월', '화', '수', '목', '금', '토', '일']
 
 @st.cache_data
-def load_subway(path: str='./day62_streamlit_subway/input/subway_long.csv') -> pd.DataFrame:
+def load_subway(path: str='./input/subway_long.csv') -> pd.DataFrame:
     """ subway_long.csv를 읽어들여 반환한다.(대구 지하철 시간대별 승하차 데이터) """
 
     # 문자열로 반복되는 컬럼은 category 타입으로 읽어 메모리를 절약한다.    
